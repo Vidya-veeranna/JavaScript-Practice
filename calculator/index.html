@@ -13,37 +13,37 @@
 </head>
 <body>
     <section>
-        <div id="display"></div>
+        <input type="text" name="display" id="display">
         <article>
             <div>
-                <span>C</span>
-                <span>%</span>
-                <span><i class="fa-solid fa-delete-left" style="background-color: rgb(27, 27, 27);"></i></span>
-                <span><i class="fa-solid fa-divide"></i></span>
+                <span onclick="display.value = ''">C</span>
+                <span onclick="display.value += '%'">%</span>
+                <span onclick="display.value = display.value.toString().slice(0,-1)"><i class="fa-solid fa-delete-left" style="background-color: rgb(27, 27, 27);"></i></span>
+                <span onclick="display.value += '/'"><i class="fa-solid fa-divide"></i></span>
             </div>
             <div>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span><i class="fa-solid fa-xmark"></i></span>
+                <span onclick="display.value += '7'">7</span>
+                <span onclick="display.value += '8'">8</span>
+                <span onclick="display.value += '9'">9</span>
+                <span onclick="display.value += '*'"><i class="fa-solid fa-xmark"></i></span>
             </div>
             <div>
-                <span>4</span>
-                <span>5</span>
-                <span>6</span>
-                <span><i class="fa-solid fa-minus"></i></span>
+                <span onclick="display.value += '4'">4</span>
+                <span onclick="display.value += '5'">5</span>
+                <span onclick="display.value += '6'">6</span>
+                <span onclick="display.value += '-'"><i class="fa-solid fa-minus"></i></span>
             </div>
             <div>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span><i class="fa-solid fa-plus"></i></span>
+                <span onclick="display.value += '1'">1</span>
+                <span onclick="display.value += '2'">2</span>
+                <span onclick="display.value += '3'">3</span>
+                <span onclick="display.value += '+'"><i class="fa-solid fa-plus"></i></span>
             </div>
             <div>
-                <span>00</span>
-                <span>0</span>
-                <span>.</span>
-                <span><i class="fa-solid fa-equals" style="background-color: rgb(43, 43, 207);"></i></span>
+                <span onclick="display.value += '00'">00</span>
+                <span onclick="display.value += '0'">0</span>
+                <span onclick="display.value += '.'">.</span>
+                <span onclick="display.value = eval(display.value)"><i class="fa-solid fa-equals" style="background-color: rgb(43, 43, 207);"></i></span>
             </div>
         </article>
     </section>
