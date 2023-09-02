@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #be66ed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-box,
+.quiz-box,
+.result-box {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.info-box.activeInfo,
+.quiz-box.activeQuiz,
+.result-box.activeResult {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.info-box {
+  width: 450px;
+  opacity: 0;
+}
+.quiz-box {
+  width: 500px;
+}
+#info-title,
+.quiz-title {
+  font-weight: bold;
+  padding: 15px 20px;
+  border-bottom: 1px solid lightgray;
+}
+#info-body,
+.quiz-body {
+  padding: 10px 20px;
+}
+.quiz-body div {
+  padding: 5px;
+}
+.quiz-body option {
+  background-color: #c991ff;
+  border: 1px solid #9900ff;
+  cursor: pointer;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.quiz-body option:hover {
+  background-color: white;
+}
+#info-body div {
+  padding: 5px;
+  font-size: 0.9em;
+}
+.info span {
+  color: red;
+  font-weight: bold;
+}
+
+#info-button,
+.quiz-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+  border-top: 1px solid lightgray;
+}
+#info-button {
+  justify-content: flex-end;
+}
+.quiz-footer {
+  justify-content: space-between;
+}
+button {
+  width: 80px;
+  height: 35px;
+  font-weight: 500;
+  outline: none;
+  border: 1px solid #9900ff;
+  background-color: #9900ff;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #cc99ff;
+  color: #9900ff;
+  font-weight: bold;
+}
+
+.quiz-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-title div {
+  background-color: #c579f8;
+  color: white;
+  padding: 10px;
+  font-weight: 100;
+  border-radius: 5px;
+}
+.quiz-title div span {
+  background-color: #862bc2;
+  padding: 6px;
+  border-radius: 5px;
+}
+.result-box {
+  opacity: 0;
+}
